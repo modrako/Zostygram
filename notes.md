@@ -6,6 +6,7 @@ Poznamky terminal -
 	npm – no package manager
 	npm run build – spravy build (release build)
 	npm run start – zapne spraveny build
+    
 
 Poznamky git commandy -
 	git init - spravy git
