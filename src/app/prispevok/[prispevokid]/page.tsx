@@ -5,11 +5,11 @@ import Typography from '@mui/material/Typography';
 
 export const metadata = {title: " Detail prispevkov | Miligram"}
 
-export default function PostDetail() {
+export default function PostDetail({ params, }: {params: {prispevokid: string};}) {
 
   return (
 
-    <Typography> Detail prispevkov </Typography>
+    <Typography> Detail prispevkov {params.prispevokid}</Typography>
 
   );
 }
