@@ -26,7 +26,8 @@ Poznamky next js -
 	page  - stranka ktoru loaduje
 	not-found – custom not found 404 stranka
 	priecinky ktore su v () su ako keby neviditelne a len pre teba, nepouziva ich program
-	priecinky ktore su v [] su premene
+	priecinky ktore su v [] su premene na dynamicke adressy
+    layout.tsx je base stranka ktora sa loaduje vsade
 
 GitHub - 
 	git – robi backupy projectky na ktore vies roll backnut
