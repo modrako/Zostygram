@@ -10,6 +10,6 @@ export default function Home() {
 
   return (
 
-    <><Typography> Domovska Stranka </Typography></>
+    <><Typography> Domovska Stranka booo</Typography></>
   );
 }
