@@ -1,15 +1,22 @@
 //src/app/auth/prihlasenie/page.tsx
+"use client";
 
+import { signIn } from "next-auth/react";
+import { Button, Container, Typography } from "@mui/material";
 
-import Typography from '@mui/material/Typography';
-
-export const metadata = {title: " Prihlasenie| Miligram"}
-
-export default function SignIn() {
+export default function LoginPage() {
+  const handleGoogleLogin = () => {
+    signIn("google");
+  };
 
   return (
-
-    <Typography> Prihlasenie</Typography>
-
+    <Container maxWidth="sm" style={{ textAlign: "center", marginTop: "100px" }}>
+      <Typography variant="h4" gutterBottom>
+        Prihlásenie
+      </Typography>
+      <Button variant="contained" color="primary" onClick={handleGoogleLogin}>
+        Prihlásiť sa pomocou Google
+      </Button>
+    </Container>
   );
 }
