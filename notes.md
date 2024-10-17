@@ -6,7 +6,7 @@ Poznamky terminal -
 	npm – no package manager
 	npm run build – spravy build (release build)
 	npm run start – zapne spraveny build
-    
+    npm install - stiahne npm
 
 Poznamky git commandy -
 	git init - spravy git
@@ -16,7 +16,7 @@ Poznamky git commandy -
 	git remote add origin (git hub project link) – spoji github a projekt
 	git remote -v – vypise githun link
 	git add . – prida projekt na github
-	
+
 Poznamky tsx -
 	Container cca = <div>
 	Typography cca = <p>
