@@ -29,6 +29,9 @@ Poznamky next js -
 	priecinky ktore su v [] su premene na dynamicke adressy
     layout.tsx je base stranka ktora sa loaduje vsade
 
+    Nextjs ma server a client side - client side loaduje stranku v prehliadacy a je pomalsia oproti server side. ale vieme cez client side brat user input
+    	server side je default a client side sa pouziva tak ze na horok projektu dame 
+
 GitHub - 
 	git – robi backupy projectky na ktore vies roll backnut
 	github – portujes svoj naj lepsi git na github z ktore ho to ide na production server
@@ -36,5 +39,7 @@ GitHub -
 Vercel-
 	Vercel sa pouziva na to aby si prepojil svoje next.js github repo z vercelom ktory ho 	automaticky bude uplodovat na web 
 
+NextAuth -
+	login keys a secrety dame do suboru .env ktory nedavame na github cez gitignore. kontekt tohto suboru mas na maily
 -- Cvik poznamky
 (do not steal)
