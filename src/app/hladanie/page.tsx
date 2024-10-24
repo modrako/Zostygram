@@ -1,15 +1,15 @@
-// src/app/hladanie/page.tsx
+// src/app/hladat/page.tsx
 
 
-import Typography from '@mui/material/Typography';
+import Typography from "@mui/material/Typography";
 
-export const metadata = {title: " hladat| Miligram"}
+export const metadata = { title: "Hľadať | ZoškaSnap" };
 
 export default function Search() {
 
   return (
 
-    <Typography> hladat</Typography>
+      <Typography> Hľadať </Typography>
 
   );
 }

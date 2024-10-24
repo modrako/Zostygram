@@ -1,34 +1,34 @@
-// /src/app/layout.tsx
+// src/app/layout.tsx
 
-import type { Metadata } from "next"; // Import Metadata type
-import "./globals.css"; // Import global styles
-import Navbar from "@/components/NavBar"; // Import Navbar component
-import AuthProvider from "../components/AuthProvider"; // Import AuthProvider component
+import { Metadata } from "next";
+import "./globals.css";
+import Navbar from "../components/NavBar";
+import AuthProvider from "../components/AuthProvider";
 
-// Define the metadata for the layout
 export const metadata: Metadata = {
   title: "SnapZoška",
   description: "Created by students of SPŠE Zochova 9, Bratislava",
 };
 
-// Define the RootLayout function as a server component
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="sk">
       <body>
         <AuthProvider>
           <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
             <main style={{ flexGrow: 1 }}>
-              {children} {/* Render child components */}
+              {children}
             </main>
-            <Navbar /> {/* Bottom Navigation */}
           </div>
+          <Navbar /> 
         </AuthProvider>
       </body>
     </html>
   );
 }
+
+

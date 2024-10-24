@@ -1,15 +1,16 @@
 // src/app/podmienky/page.tsx
 
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container'
 
-export const metadata = {title: " Podmienky | Miligram"}
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
-export default function Home() {
+export const metadata = { title: "Podmienky | ZoškaSnap" };
+
+export default function TermsConditions() {
 
   return (
     <Container>
-        <Typography> Toto neni podmienka </Typography>
+      <Typography> Podmienky používania </Typography>
     </Container>
   );
 }
