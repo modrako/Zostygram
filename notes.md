@@ -40,6 +40,16 @@ Vercel-
 	Vercel sa pouziva na to aby si prepojil svoje next.js github repo z vercelom ktory ho 	automaticky bude uplodovat na web 
 
 NextAuth -
+	dopln ako sa eduje inak ta mikne
 	login keys a secrety dame do suboru .env ktory nedavame na github cez gitignore. kontekt tohto suboru mas na maily
+
+Chapter 8 neviem -
+	Public und Private -
+ 		My chceme aby sa user nedostal na niake pod stranky pokial nesiu lognuty ako to spravime
+   		pod stranky ktore necheme aby sa do nich dostal dame do (private) foldra 
+     		a pod stranky ktore chceme dame do (public), do private potom pridame layout.tsx a novy component AuthGuard.tsx
+       AuthGurad - 
+       		novy komponent ktory pozre ci user je lognuti a potom ho redirektne pokial neni pozri - https://dev.to/tigawanna/auth-guarding-in-react-392o
+	 	
 -- Cvik poznamky
 (do not steal)
