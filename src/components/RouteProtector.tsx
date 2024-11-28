@@ -10,7 +10,7 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (status === "unauthenticated") {
-      router.push("/auth/prihlasenie"); // Redirect unauthenticated users
+      router.push("/auth/prihlasenie"); 
     }
   }, [status, router]);
 
