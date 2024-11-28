@@ -11,6 +11,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import LoginIcon from '@mui/icons-material/Login';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import LogoutIcon from '@mui/icons-material/Logout';
+import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import { useRouter } from 'next/navigation';
 import { useSession } from "next-auth/react";
 
@@ -27,7 +28,7 @@ export default function Navbar() {
   // Non-authenticated navigation paths
   const nonAuthPaths = [
     { label: "Domov", value: "/", icon: <HomeIcon /> },
-    { label: "Prispevky", value: "/prispevok", icon: <AddCircleIcon /> },
+    { label: "Gdpr", value: "/gdpr", icon: <HistoryEduIcon/> },
     { label: "Registrácia", value: "/auth/registracia", icon: <AppRegistrationIcon /> },
     { label: "Prihlásenie", value: "/auth/prihlasenie", icon: <LoginIcon /> }
   ];
@@ -35,7 +36,7 @@ export default function Navbar() {
   // Authenticated navigation paths
   const authPaths = [
     { label: "Domov", value: "/", icon: <HomeIcon /> },
-    { label: "Hľadať", value: "/hladat", icon: <SearchIcon /> },
+    { label: "Hľadať", value: "/hladanie", icon: <SearchIcon /> },
     { label: "Pridať", value: "/prispevok", icon: <AddCircleIcon /> },
     {
       label: "Profil",
