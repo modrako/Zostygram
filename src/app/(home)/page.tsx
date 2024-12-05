@@ -4,8 +4,7 @@
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/authOptions";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import { Typography, Container } from "@mui/material";
 
 export const metadata = { title: "Domov | ZoškaSnap" };
 
