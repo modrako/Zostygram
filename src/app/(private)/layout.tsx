@@ -1,4 +1,8 @@
-import RouteProtector from "@/components/RouteProtector";
+// src/app/(private)/layout.tsx
+
+import AuthGuard from "@/components/AuthGuard";
+
+export const metadata = { title: "Protected | SnapZoška" };
 
 export default function PrivateLayout({
   children,
@@ -6,8 +10,8 @@ export default function PrivateLayout({
   children: React.ReactNode;
 }) {
   return (
-    <RouteProtector>
-      {children} 
-    </RouteProtector>
+    <AuthGuard>
+      {children}
+    </AuthGuard>
   );
 }

@@ -1,82 +1,62 @@
-
-// /src/components/Navbar.tsx
-
+// src/components/Navbar.tsx
 "use client";
 
 import * as React from 'react';
-import { BottomNavigation, BottomNavigationAction, Box, Avatar} from '@mui/material';
+import { BottomNavigation, BottomNavigationAction, Box , Avatar, IconButton} from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
-import SearchIcon from '@mui/icons-material/Search';
-import AddCircleIcon from '@mui/icons-material/AddCircle';
-import LoginIcon from '@mui/icons-material/Login';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
-import LogoutIcon from '@mui/icons-material/Logout';
-import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
-import IconButton from '@mui/material/IconButton';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { useRouter } from 'next/navigation';
-import { useSession } from "next-auth/react";
+import { useSession } from 'next-auth/react';
+import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
+import SecurityIcon from '@mui/icons-material/Security';
 import { useTheme } from "../components/ThemeProvider";
+import DarkModeIcon from "@mui/icons-material/DarkMode"
+import LightModeIcon from '@mui/icons-material/LightMode';
+import SearchIcon from '@mui/icons-material/Search';
+import InfoIcon from '@mui/icons-material/Info';
+import Article from '@mui/icons-material/Article';
 
 export default function Navbar() {
+  const { data: session } = useSession();
   const [value, setValue] = React.useState('/');
   const router = useRouter();
-  const { data: session, status } = useSession();
-  const { toggleTheme, isDarkMode } = useTheme(); // Use theme context
+  const { toggleTheme, isDarkMode} = useTheme();
 
   const handleNavigation = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     router.push(newValue);
   };
 
-  // Non-authenticated navigation paths
-  const nonAuthPaths = [
+  const nonAuthIcons = [
     { label: "Domov", value: "/", icon: <HomeIcon /> },
-    { label: "Gdpr", value: "/gdpr", icon: <HistoryEduIcon/> },
+    { label: "O nás", value: "/o-mne", icon: <InfoIcon />},
     { label: "Registrácia", value: "/auth/registracia", icon: <AppRegistrationIcon /> },
-    { label: "Prihlásenie", value: "/auth/prihlasenie", icon: <LoginIcon /> }
+    { label: "Prihlásenie", value: "/auth/prihlasenie", icon: <LoginIcon /> },
   ];
-
-  // Authenticated navigation paths
-  const AuthPaths = [
+  
+  const authIcons = [
     { label: "Domov", value: "/", icon: <HomeIcon /> },
     { label: "Hľadať", value: "/hladanie", icon: <SearchIcon /> },
-    { label: "Pridať", value: "/prispevok", icon: <AddCircleIcon /> },
+    { label: "Pridať", value: "/pridat", icon: <AddCircleIcon /> },
     {
       label: "Profil",
       value: "/profil",
-      icon: session?.user?.image ? (
-        <Avatar 
-          alt={session?.user?.name || "User"} 
-          src={session?.user?.image || undefined} 
-        />
-      ) : (
-        <Avatar>{session?.user?.name?.charAt(0) || "U"}</Avatar>
-      )
+      icon: <Avatar alt={session?.user?.name || "User"} src={session?.user?.image || undefined} />
     },
     { label: "Odhlásiť", value: "/auth/odhlasenie", icon: <LogoutIcon /> },
   ];
 
-  // Decide which paths to use based on authentication status
-  const navigationPaths = status === "authenticated" ? AuthPaths : nonAuthPaths;
-
+  const navigationPaths = session ? authIcons : nonAuthIcons;
   return (
-    <Box sx={{ width: '100%', position: 'fixed', bottom: 0 }}>
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={handleNavigation}
-      >
+    <Box sx={{ width: "100%", position: "fixed", bottom: 0 }}>
+      <BottomNavigation showLabels value={value} onChange={handleNavigation}>
         {navigationPaths.map((path) => (
-          <BottomNavigationAction
-            key={path.value}
-            label={path.label}
-            value={path.value}
-            icon={path.icon}
-          />
+          <BottomNavigationAction key={path.value} label={path.label} value={path.value} icon={path.icon} />
         ))}
       </BottomNavigation>
+
       <IconButton
         onClick={toggleTheme}
         sx={{ position: "absolute", top: 10, right: 10 }}
@@ -86,4 +66,3 @@ export default function Navbar() {
     </Box>
   );
 }
-

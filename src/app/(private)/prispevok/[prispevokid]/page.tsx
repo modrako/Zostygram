@@ -1,26 +1,16 @@
-// src/app/prispevok/[prispevokId]/page.tsx
+// src/app/prispevok/[id]/page.tsx
 
 
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container/Container';
 
-export const metadata = { title: "Detail prispevku | ZoškaSnap" };
+export const metadata = {title: " Detail prispevkov | ZapZapp"}
 
-export default function PostDetail({
-  params,
-
-}: {
-  params: {
-    prispevokId: string;
-  };
-}) {
-
+export default async function PostDetail({ params, }: {params: Promise<{prispevokid: string}>;}) {
   return (
     <Container>
-      <Typography> Príspevok číslo: {params.prispevokId} </Typography>
+      <Typography> Detail prispevkov {(await params).prispevokid}</Typography>
     </Container>
-
-      
 
   );
 }

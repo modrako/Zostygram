@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, ".next/types/app/(private)/profil/[id]/page.tsx"  ],
   "exclude": [
     "node_modules"
   ]
