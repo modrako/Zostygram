@@ -1,15 +1,14 @@
 import { createTheme } from '@mui/material/styles';
 
-// Light theme colors
 const lightPalette = {
   primary: {
-    main: '#F5A9B8', // pink
+    main: '#3E5879', 
   },
   secondary: {
-    main: '#5BCEFA', // light blue
+    main: '#F5EFE7', 
   },
   background: {
-    default: '#fafafa', 
+    default: '#F5EFE7', 
     paper: '#ffffff', 
   },
   text: {
@@ -18,16 +17,15 @@ const lightPalette = {
   },
 };
 
-// Dark theme colors
 const darkPalette = {
   primary: {
-    main: '#D162A4', // pink
+    main: '#F5EFE7', 
   },
   secondary: {
-    main: '#FF9A56', // light orange
+    main: '#3E5879', 
   },
   background: {
-    default: '#1a1a1a', 
+    default: '#213555', 
     paper: '#2c2c2c', 
   },
   text: {
