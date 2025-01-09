@@ -2,7 +2,7 @@
 
 import PodmienkyView from "@/sections/PodmienkyView"
 
-export const metadata = {title: " Podmienky | ZapZapp"}
+export const metadata = {title: " Podmienky | Zostygram"}
 
 export default function Home() {
 

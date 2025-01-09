@@ -4,7 +4,7 @@
 
 import GdprView from "@/sections/GdprView";
 
-export const metadata = {title: " GDPR | ZapZapp"}
+export const metadata = {title: " GDPR | Zostygram"}
 
 export default function Gdpr() {
 

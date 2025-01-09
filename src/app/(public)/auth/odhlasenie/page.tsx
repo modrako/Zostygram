@@ -4,7 +4,7 @@
 
 import SignOutView from "@/sections/SignOutView";
 
-export const metadata = { title : 'Odhlasenie | ZapZapp'};
+export const metadata = { title : 'Odhlasenie | Zostygram'};
 
 export default function SignOut() {
 

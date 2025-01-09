@@ -3,7 +3,7 @@
 
 import {Typography, Box} from '@mui/material';
 
-export const metadata = {title: " Pridať | ZapZapp"}
+export const metadata = {title: " Pridať | Zostygram"}
 
 export default function Add() {
 

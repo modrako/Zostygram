@@ -7,7 +7,7 @@ import { authOptions } from "../api/auth/[...nextauth]/authOptions";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-export const metadata = { title: "Domov | ZapZapp" };
+export const metadata = { title: "Domov | Zostygram" };
 
 export default async function HomePage() {
   const session = await getServerSession(authOptions);

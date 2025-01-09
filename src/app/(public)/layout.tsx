@@ -1,6 +1,6 @@
 // src/app/(public)/layout.tsx
 
-export const metadata = { title: "Public | ZapZapp" };
+export const metadata = { title: "Public | Zostygram" };
 
 export default function PublicLayout({
   children,

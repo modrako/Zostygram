@@ -4,7 +4,7 @@
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container/Container';
 
-export const metadata = {title: " Detail prispevkov | ZapZapp"}
+export const metadata = {title: " Detail prispevkov | Zostygram"}
 
 export default async function PostDetail({ params, }: {params: Promise<{prispevokid: string}>;}) {
   return (

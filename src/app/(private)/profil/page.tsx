@@ -3,7 +3,7 @@
 
 import {Typography, Box} from '@mui/material';
 
-export const metadata = {title: " Zoznam profilov | ZapZapp"}
+export const metadata = {title: " Zoznam profilov | Zostygram"}
 
 export default function ProfileList() {
 

@@ -3,7 +3,7 @@
 
 import {Typography, Box} from '@mui/material/';
 
-export const metadata = {title: " Hladať | ZapZapp"}
+export const metadata = {title: " Hladať | Zostygram"}
 
 export default function Search() {
 

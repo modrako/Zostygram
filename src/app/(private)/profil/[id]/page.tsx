@@ -3,7 +3,7 @@
 
 import ProfileDetailView from "@/sections/ProfileView";
 
-export const metadata = {title: " Detail profilu | ZapZapp"}
+export const metadata = {title: " Detail profilu | Zostygram"}
 
 export default function ProfileDetail() {
 

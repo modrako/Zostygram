@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import { Link } from '@mui/material';
 
-export const metadata = { title: " O mne | ZapZapp" }
+export const metadata = { title: " O mne | Zostygram" }
 
 export default function Home() {
 
@@ -14,8 +14,8 @@ export default function Home() {
       <Typography sx={{ maxWidth: 800, textAlign: "center", lineHeight: 2 }}>Cauko <br />
 
         Chcem dobre veci lebo zle su zle<br />
-        <Link href="https://www.youtube.com/@reyez1983" color="secondary" underline="hover" fontStyle="italic">Youtube</Link> <br />
-        <Link href="https://www.instagram.com/_r_.e._n_/profilecard/?igsh=MTJ6dDV4eDM2c3Ziaw==" color="secondary" underline="hover" fontStyle="italic">Instagram</Link> <br />
+        <Link href="https://www.youtube.com/@modrako5829" color="secondary" underline="hover" fontStyle="italic">Youtube</Link> <br />
+        <Link href="https://www.instagram.com" color="secondary" underline="hover" fontStyle="italic">Instagram</Link> <br />
         <Link href="https://zochova.sk/" color="secondary" underline="hover" fontStyle="italic">moja skola</Link>
       </Typography>
     </Box>
