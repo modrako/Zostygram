@@ -9,7 +9,7 @@ const lightPalette = {
   },
   background: {
     default: '#F5EFE7', 
-    paper: '#ffffff', 
+    paper: '#D8C4B6', 
   },
   text: {
     primary: '#000000', 
@@ -25,8 +25,8 @@ const darkPalette = {
     main: '#3E5879', 
   },
   background: {
-    default: '#213555', 
-    paper: '#2c2c2c', 
+    default: '#3E5879', 
+    paper: '#213555', 
   },
   text: {
     primary: '#fff', 
