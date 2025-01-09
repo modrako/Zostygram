@@ -16,7 +16,7 @@ export default function Home() {
         Chcem dobre veci lebo zle su zle<br />
         <Link href="https://www.youtube.com/@reyez1983" color="secondary" underline="hover" fontStyle="italic">Youtube</Link> <br />
         <Link href="https://www.instagram.com/_r_.e._n_/profilecard/?igsh=MTJ6dDV4eDM2c3Ziaw==" color="secondary" underline="hover" fontStyle="italic">Instagram</Link> <br />
-        <Link href="https://zochova.sk/" color="secondary" underline="hover" fontStyle="italic">Moja škola</Link>
+        <Link href="https://zochova.sk/" color="secondary" underline="hover" fontStyle="italic">moja skola</Link>
       </Typography>
     </Box>
   );
