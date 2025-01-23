@@ -15,6 +15,7 @@ import CardContent from "@mui/material/CardContent";
 
 // Server action import
 import { fetchPosts } from "@/app/actions/posts";
+import { CardHeader } from "@mui/material";
 
 // Post interface
 interface Post {
@@ -54,6 +55,7 @@ const PostsView = () => {
         {posts.map((post) => (
           <Grid item xs={12} sm={6} md={4} key={post.id}>
             <Card>
+              <CardHeader title = {post.caption}/>
               <CardMedia
                 component="img"
                 height="140"
@@ -61,7 +63,6 @@ const PostsView = () => {
                 alt={post.caption || "Príspevok bez popisu"}
               />
               <CardContent>
-                <Typography variant="body1">{post.caption || "Bez popisu"}</Typography>
                 <Typography variant="body2" color="text.secondary">
                   {post.user.name || "Neznámy používateľ"}
                 </Typography>
