@@ -2,6 +2,9 @@
 
 "use client";
 
+// Next imports
+import Link from 'next/link'
+
 // React imports
 import { useEffect, useState } from "react";
 
@@ -12,6 +15,7 @@ import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
+
 
 // Server action import
 import { fetchPosts } from "@/app/actions/posts";
@@ -48,17 +52,15 @@ const PostsView = () => {
 
   return (
     <Container sx={{ mt: 4 }}>
-      <Typography variant="h4" sx={{ mb: 3 }}>
-        Príspevky
-      </Typography>
       <Grid container spacing={2}>
         {posts.map((post) => (
-          <Grid item xs={12} sm={6} md={4} key={post.id}>
-            <Card>
-              <CardHeader title = {post.caption}/>
+          <Grid item xs={12} key={post.id} sx={{ display: "flex", justifyContent: "center" }}>
+            <Card sx={{ maxWidth: 600, width: "100%" }}>
+            <Link href={`/prispevok/${post.id}`} style={{textDecoration: 'none', color: 'white',}}>
+              <CardHeader title = {post.caption} />
               <CardMedia
                 component="img"
-                height="140"
+                height="280"
                 image={post.imageUrl}
                 alt={post.caption || "Príspevok bez popisu"}
               />
@@ -67,6 +69,7 @@ const PostsView = () => {
                   {post.user.name || "Neznámy používateľ"}
                 </Typography>
               </CardContent>
+              </Link>
             </Card>
           </Grid>
         ))}

@@ -10,7 +10,7 @@ export default async function PostList() {
 
   return (
     <Box sx={{ display: "flex", alignItems: "center",flexDirection: "column"}}>
-      <Typography variant='h4'> List prispevkov </Typography>
+      <Typography variant='h2'> Prispevky </Typography>
       <PostsView></PostsView>
     </Box>
   );
