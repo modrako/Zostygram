@@ -5,7 +5,7 @@ const lightPalette = {
     main: '#3E5879', 
   },
   secondary: {
-    main: '#F5EFE7', 
+    main: '#1972eb', 
   },
   background: {
     default: '#F5EFE7', 
@@ -22,7 +22,7 @@ const darkPalette = {
     main: '#F5EFE7', 
   },
   secondary: {
-    main: '#3E5879', 
+    main: '#ba7f34', 
   },
   background: {
     default: '#3E5879', 
